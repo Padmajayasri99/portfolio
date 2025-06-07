@@ -1,0 +1,205 @@
+header {
+  height: 100vh; 
+  background-image: url(../../assets/herobg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  overflow: visible; /* Allow shadows to overflow */
+
+}
+
+.header__container {
+  padding: 0 0 0 6em;
+  height: 100%;  /* Full height of header */
+  position: relative;
+  display: flex;
+  overflow: visible; /* Allow shadows */
+}
+
+.firstContainer {
+  flex: 1;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.firstContainer h3 {
+  font-size: 2em;
+  display: flex;
+  align-items: end;
+}
+
+.firstContainer h1 {
+  font-size: 5.3em;
+}
+
+.firstContainer h5 {
+  font-size: 3em;
+}
+
+.secondContainer {
+  flex: 1;
+  display: flex;
+  align-items: flex-end; /* fixed */
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;  /* Keep 100% height */
+  width: 100%;
+  overflow: visible; /* Important */
+}
+
+.imgCon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  padding-right: 40px;
+  overflow: visible; /* IMPORTANT */
+  
+}
+
+.glowWrapper {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  clip-path: polygon(
+    50% 0%, 60% 2%, 70% 6%, 80% 14%, 88% 26%, 94% 40%, 
+    98% 50%, 94% 60%, 88% 74%, 80% 86%, 70% 94%, 60% 98%, 
+    50% 100%, 40% 98%, 30% 94%, 20% 86%, 12% 74%, 6% 60%, 
+    2% 50%, 6% 40%, 12% 26%, 20% 14%, 30% 6%, 40% 2%
+  );
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  overflow: visible;
+}
+
+.glowWrapper::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  clip-path: inherit; /* same polygon */
+  background: rgba(0, 170, 255, 0.7);
+  filter: blur(30px);
+  z-index: -1; /* behind the image */
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.glowWrapper:hover {
+  transform: scale(1.05) rotate(4deg);
+}
+
+.glowWrapper:hover::before {
+  opacity: 1;
+  filter: blur(40px);
+}
+
+
+/* Image clipped same as wrapper, no shadow on image */
+.profile {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: inherit; /* same polygon shape */
+  display: block;
+  pointer-events: none; /* let hover pass through wrapper */
+  user-select: none;
+}
+
+.type {
+  letter-spacing: 1px;
+  color: var(--color-primary);
+  font-size: 2rem;
+}
+
+/* CTA */
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  width: 100%;
+}
+
+/* HEADER SOCIALS */
+.header__socials {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 2em;
+  font-size: 2.5rem;
+}
+
+/* =================== MEDIA QUERIES (MEDIUM DEVICES) ===============*/
+
+@media screen and (max-width: 1024px) {
+  header {
+    height: 80vh;
+    width: 100%;
+  }
+  .firstContainer h1 {
+    font-size: 2.5em;
+  }
+
+  .firstContainer h3 {
+    font-size: 1em;
+  }
+
+  .firstContainer h5 {
+    font-size: 1.4em;
+  }
+}
+
+/* =================== MEDIA QUERIES (SMALL DEVICES) ===============*/
+
+@media screen and (max-width: 751px) {
+  header {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+  }
+  .me {
+    margin-top: 6rem;
+    height: auto;
+  }
+  .header__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+  }
+  .firstContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+  }
+
+  .firstContainer h3 {
+    font-size: 1em;
+  }
+  .firstContainer h5 {
+    font-size: 1em;
+  }
+  .firstContainer h1 {
+    font-size: 2em;
+  }
+
+  .cta {
+    font-size: 1em;
+    justify-content: center;
+    margin-bottom: 1em;
+  }
+
+  .header__socials {
+    font-size: 1.6em;
+    margin: 1em 0;
+    padding: 0;
+  }
+
+  .secondContainer {
+    display: none;
+  }
+}
