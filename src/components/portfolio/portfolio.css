@@ -36,6 +36,13 @@
     margin-bottom: 1em;
     
 }
+.portfolio__item-image img {
+    width: 100%;
+    height: 200px; /* or whatever height you prefer */
+    object-fit: cover;
+    display: block;
+}
+
 
 /* =================== MEDIA QUERIES (MEDIUM DEVICES) ===============*/
 

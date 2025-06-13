@@ -2,12 +2,11 @@ import "aos/dist/aos.css";
 import "./portfolio.css";
 import AOS from "aos";
 import Img1 from "../../assets/nn.png";
-import Img2 from "../../assets/Home.PNG";
-import Img3 from "../../assets/wages.png";
-import Img6 from "../../assets/IgClone.png";
+import Img2 from "../../assets/portfolio.png";
+import Img3 from "../../assets/bdgt.png";
+
 import React from "react";
-import blog from "../../assets/blog.JPG";
-import wordle from "../../assets/wordle.JPG";
+
 
 // ..
 AOS.init({
@@ -27,44 +26,19 @@ const data = [
     id: 2,
     img: Img2,
     title: "My Personal Portfolio",
-    github: "https://github.com/Sandeepk14/portfolio",
-    desc: "The MERN portfolio app serves as an exhibit for my full stack development projects and abilities. Constructed using Express.js, React, Node.js, and MongoDB, it demonstrates his expertise in developing dynamic online apps. The app offers insights into his work and skills with JavaScript frameworks and has a simple, responsive design.",
-    demo: "https://teal-daffodil-f80e69.netlify.app/",
+    github: "https://github.com/Padmajayasri99/portfolio",
+    desc: "A responsive MERN stack portfolio built with React, showcasing my projects and development skills. It features dynamic content, clean UI, and seamless user interaction..",
+    demo: "https://portfolio-six-kohl-74.vercel.app/",
   },
   {
     id: 3,
     img: Img3,
-    title: "Mern Image Uploader App using Multer",
-    github: "https://github.com/Sandeepk14/Mern-Image-Frontend-app",
-    desc: "Setting up a Node.js/Express backend to manage file uploads and a React frontend for user input are necessary when building a MERN multiple image uploader application using Multer. For file management and local or cloud storage of photos, use Multer middleware. Fotometadata is stored in MongoDB. Ensure that security and error handling procedures are followed.",
-    demo: "https://main--mernimage.netlify.app/",
+    title: "Budget Analyzer and tracker",
+    github: "",
+    desc: "It helps users track income, expenses, and savings with real-time visual insights. Built with a clean UI and intuitive controls to simplify personal finance management",
+    demo: "",
   },
-  {
-    id: 6,
-    img: Img6,
-    title:
-      "Online Wriiten Examination System Using BlockChain & Machine Learning",
-    github:
-      "https://github.com/Kushalobroy/Written-Examination-System-Using-Blockchain-IPFS-and-Machine-Learning/",
-    desc: "Online Wriiten Examination System Using BlockChain & Machine Learning by implementing React.Js, Node.js, Express.js and the MongoDB for storage.",
-    demo: "#",
-  },
-  {
-    id: 7,
-    img: blog,
-    title: "Upcoming Project....... Amazon Clone app",
-    github: "https://github.com/Sandeepk14/",
-    desc: "",
-    demo: "#",
-  },
-  {
-    id: 9,
-    img: wordle,
-    title: "Upcoming Project....... YouTube Clone app",
-    github: "https://github.com/Sandeepk14/",
-    desc: "",
-    demo: "#",
-  },
+  
 ];
 
 const Portfolio = () => {
