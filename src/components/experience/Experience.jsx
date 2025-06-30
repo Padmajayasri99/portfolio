@@ -1,10 +1,11 @@
 import "aos/dist/aos.css";
 import "./experience.css";
 import AOS from "aos";
-import React from "react";
+import React, { useEffect } from "react";
 import srkr from '../../assets/srkr.jpeg';
 import sasi from '../../assets/sasi.jpeg';
 import aditya from '../../assets/aditya.png';
+
 
 
 
@@ -92,6 +93,9 @@ const educationData = [
 ];
 
 const Experience = () => {
+   useEffect(() => {
+    AOS.init({ duration: 1200, once: true });
+  }, []);
   return (
     <section id="experience">
       <h5>Skills I Have</h5>
@@ -124,12 +128,17 @@ const Experience = () => {
           data-aos="fade-up"
           data-aos-duration="3000"
         >
-          <p className="eduTitle">Education</p>
+          <p className="eduTitle">🎓Education & Academic Journey📚</p>
           <div className="underline"></div>
           <div className="experience__content2">
           <div className="experience__content2">
- {educationData.map(({ id, cert, sch, year, cgpa, position, logo }) => (
-  <article className={`education-block ${position}`} key={id}>
+{educationData.map(({ id, cert, sch, year, cgpa, position, logo }) => (
+  <article
+    className={`education-block ${position}`}
+    key={id}
+    data-aos={position === "left" ? "slide-right" : "slide-left"}  // ⬅ dynamic direction
+    data-aos-duration="1200"
+  >
     <div className="edu-logo">
       <img src={logo} alt={`${cert} logo`} />
     </div>
@@ -141,6 +150,7 @@ const Experience = () => {
     </div>
   </article>
 ))}
+
 
 </div>
 
