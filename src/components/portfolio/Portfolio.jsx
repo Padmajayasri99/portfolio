@@ -4,6 +4,7 @@ import AOS from "aos";
 import Img1 from "../../assets/nn.png";
 import Img2 from "../../assets/portfolio.png";
 import Img3 from "../../assets/bdgt.png";
+import Img4 from "../../assets/match.png";
 
 import React from "react";
 
@@ -36,6 +37,14 @@ const data = [
     title: "Budget Analyzer and tracker",
     github: "",
     desc: "It helps users track income, expenses, and savings with real-time visual insights. Built with a clean UI and intuitive controls to simplify personal finance management",
+    demo: "",
+  },
+   {
+    id: 4,
+    img: Img4,
+    title: "Match Mart",
+    github: "https://github.com/Padmajayasri99/MatchMart",
+    desc: "Match Mart is a comprehensive e-commerce platform that allows users to browse, search, and purchase products seamlessly. It features user authentication, product management, and a secure checkout process.",
     demo: "",
   },
   
